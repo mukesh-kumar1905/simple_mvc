@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Simplemvc::VERSION
   spec.authors       = ["Mukesh Kumar"]
   spec.email         = ["mukeshkmar1905@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Simple MVC framework written in ruby.}  
+  spec.description   = %q{Simple MVC framework written in ruby.Built on top of rack}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rack"
 end
