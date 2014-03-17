@@ -1,6 +1,8 @@
 require "simplemvc/version"
 require "simplemvc/controller.rb"
 require "simplemvc/utils.rb"
+require "simplemvc/dependencies.rb"
+
 module Simplemvc
 	class Application 
 		def call(env)
