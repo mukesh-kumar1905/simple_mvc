@@ -14,10 +14,16 @@ module Simplemvc
 			end
 			#env["PATH_INFO"]= "/pages/about" => PagesController.send(:about)
 			controller_class,action=get_controller_and_action(env)
-			puts controller_class.class
-			response=controller_class.new.send(action)	
+			controller=controller_class.new(env)
+			response=controller.send(action)	
 
-			[200 , {"Content-type" =>"text/html"},[ response ]   ]
+			if controller.get_response
+				controller.get_response
+			else
+				controller.render(action)
+				controller.get_response
+				#[200 , {"Content-type" =>"text/html"},[ response ]   ]
+			end
 		end
 		def get_controller_and_action(env)
 			_,controller_name,action=env["PATH_INFO"].split("/")
