@@ -16,14 +16,6 @@ module Simplemvc
 			controller_class,action=get_controller_and_action(env)
 			controller=controller_class.new(env)
 			response=controller.send(action)	
-
-			if controller.get_response
-				controller.get_response
-			else
-				controller.render(action)
-				controller.get_response
-				#[200 , {"Content-type" =>"text/html"},[ response ]   ]
-			end
 		end
 		def get_controller_and_action(env)
 			_,controller_name,action=env["PATH_INFO"].split("/")
