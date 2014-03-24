@@ -3,7 +3,7 @@ require "simplemvc/controller.rb"
 require "simplemvc/utils.rb"
 require "simplemvc/dependencies.rb"
 require "simplemvc/routing.rb"
-
+require "simplemvc/mapper.rb"
 module Simplemvc
 	class Application 
 		def call(env)
