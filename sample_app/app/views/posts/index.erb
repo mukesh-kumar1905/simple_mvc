@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul>
+	<% posts.each do |post| %>
+	<li>
+		<a href="/posts/edit?id=<%= post.id %>"><%=post.title%></a>
+		<a href="/posts/delete?id=<%= post.id %>">Delete <%=post.title%></a>
+	</li>
+	<% end %>
+</ul>
+<a href="/posts/new">Create new</a>
+
+</body>
+</html>
